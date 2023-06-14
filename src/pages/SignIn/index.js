@@ -49,9 +49,13 @@ export function SignIn() {
                   criar conta
                 </Link>    
               </RegisterLink>
-              <Button
-                type="submit"
-              >entrar</Button> 
+
+              <Link to="/home"> 
+                <Button
+                  type="submit"
+                >entrar
+                </Button> 
+              </Link> 
             </ButtonContainer>
             
           </Form>

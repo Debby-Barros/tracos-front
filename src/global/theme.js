@@ -5,7 +5,8 @@ export const theme = {
     white: '#ABA8A8',
     orange: '#FFB627',
     green: '#7ABF25',
-    blue: '#275DAD'
+    blue: '#275DAD',
+    light_blue: '#769BD0'
   },
   fontColor: {
     colorTitle: '#f6f6f9'
