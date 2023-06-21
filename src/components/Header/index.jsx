@@ -27,7 +27,9 @@ export function Header({name="Debora"}) {
         <Link to="/profile" style={{textDecoration: 'none'}}>
           <Button content={name}  picture="https://picsum.photos/24"/>
         </Link>
-        <Button content="anunciar"/>
+        <Link to="/announce" style={{textDecoration: 'none'}}>
+          <Button content="anunciar"/>
+        </Link>
       </NavigationMenu>
     </Container>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import 
 {   Container, 
     GlobalStyle,
@@ -9,7 +8,10 @@ import
     InputTitle,
     Input,
     Button,
-    ButtonContainer
+    ButtonContainer,
+    SubTitle,
+    Image,
+    Img
 } from "./styles";
 
 import { Header } from "../../components/Header";
@@ -23,6 +25,10 @@ export function Profile() {
         <FormContainer>
           <Form>
             <Title>meu perfil</Title>
+            <Img>
+              <Image src="https://picsum.photos/200" />
+            </Img>
+            <SubTitle>#apelido</SubTitle>
             <InputTitle>apelido</InputTitle>
             <Input 
               type="text"
@@ -31,6 +37,11 @@ export function Profile() {
             <InputTitle>telefone</InputTitle>
             <Input
               type="tel"
+              required
+            />
+            <InputTitle>email</InputTitle>
+            <Input 
+              type="text"
               required
             />
             <InputTitle>senha</InputTitle>

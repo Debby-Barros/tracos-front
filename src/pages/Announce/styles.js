@@ -25,23 +25,12 @@ export const Container = styled.body`
 export const FormContainer = styled.div`
 `
 
-export const Form = styled.form`
-    
+export const Form = styled.form`  
 `
 
 export const Title = styled.p`
   color: ${theme.fontColor.colorTitle};
   font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  font-weight: 700;
-`
-
-export const SubTitle = styled.p`
-  color: ${theme.fontColor.colorTitle};
-  font-size: 23px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,7 +71,7 @@ export const Button = styled.button`
 
 export const ButtonContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 `
 
@@ -91,7 +80,27 @@ export const Img= styled.div`
    display: flex;
    justify-content: center;
    text-align: center;
+   margin-bottom: 20px;
 `
 
 export const Image = styled.img`
+`
+
+export const DropDown = styled.select`
+    width: 345px;
+    height: 35px;
+    background-color: ${theme.colors.primary};
+    border: 1.75px solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    &::placeholder{ 
+        color: ${theme.colors.white};
+    }
+    color: ${theme.colors.white};
+    padding-left: 10px;
+
+`
+
+export const Option = styled.option`
+
 `
