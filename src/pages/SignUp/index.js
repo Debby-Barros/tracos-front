@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Container,
   FormContainer,
@@ -14,6 +14,8 @@ import {
 import api from "../../services/api";
 
 export function SignUp() {
+  const navigate = useNavigate();
+
   const [name, setName] = useState('');
   const [nickname, setNickname] = useState('');
   const [cpf, setCpf] = useState('');
@@ -38,6 +40,7 @@ export function SignUp() {
     }).catch((err) => {
       console.error("ops! ocorreu um erro" + err);
     })
+    navigate('/');
   }
 
 

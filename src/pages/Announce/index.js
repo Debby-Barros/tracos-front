@@ -57,12 +57,6 @@ export function Announce() {
                 <Option>doar</Option>
                 <Option>trocar</Option>
             </DropDown>
-
-            <InputTitle>CEP</InputTitle>
-            <Input
-              type="text"
-              required
-            />
             <br/>
             <ButtonContainer>
               <Button
