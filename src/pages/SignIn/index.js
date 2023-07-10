@@ -43,7 +43,7 @@ export function SignIn() {
       }
 
       localStorage.clear();
-      localStorage.setItem('auth-token', token);
+      localStorage.setItem('jwt-token', token);
 
       navigate('/home');
     }).catch((error) => {

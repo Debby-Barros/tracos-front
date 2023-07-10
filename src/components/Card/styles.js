@@ -32,7 +32,7 @@ padding: 2px 0;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
   background-color: ${(props) =>
-    props.type === "troca" ? theme.colors.orange : theme.colors.green};
+    props.type === false ? theme.colors.orange : theme.colors.green};
   border: 0;
   /* width: 100%; */
   cursor: pointer;

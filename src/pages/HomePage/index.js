@@ -1,59 +1,86 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, GlobalStyle, Cards } from "./styles";
 
 import { Card } from "../../components/Card";
 import { Header } from "../../components/Header";
 import { Search } from "../../components/Search";
+import api from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
 export function HomePage() {
-  const [search, setSearch] = useState("");
 
   const PRODUCTS = [
     {
       name: "Paçoca",
       description: "Product description example",
-      type: "troca",
-      image: "https://picsum.photos/200",
+      donation: false,
+      pictureUrl: "https://picsum.photos/200",
     },
     {
       name: "Product",
       description: "Product description example",
-      type: "troca",
-      image: "https://picsum.photos/200",
+      donation: false,
+      pictureUrl: "https://picsum.photos/200",
     },
     {
       name: "Product",
       description: "Product description example",
-      type: "troca",
-      image: "https://picsum.photos/200",
+      donation: false,
+      pictureUrl: "https://picsum.photos/200",
     },
     {
-      name: "Product",
+      name: "caderno inteligente",
       description: "Product description example",
-      type: "doação",
-      image: "https://picsum.photos/200",
+      donation: true,
+      pictureUrl: "https://picsum.photos/200",
     },
     {
       name: "salve",
       description: "salve description example",
-      type: "troca",
-      image: "https://picsum.photos/200",
+      donation: false,
+      pictureUrl: "https://picsum.photos/200",
     },
     {
       name: "ulala",
       description: "ulala description example",
-      type: "troca",
-      image: "https://picsum.photos/200",
+      donation: false,
+      pictureUrl: "https://picsum.photos/200",
     },
     {
       name: "Product",
       description: "Product description example",
-      type: "troca",
-      image: "https://picsum.photos/200",
+      donation: false,
+      pictureUrl: "https://picsum.photos/200",
     },
   ];
 
-  const filteredProducts = PRODUCTS.filter((product) =>
+  const navigate = useNavigate();
+  const [search, setSearch] = useState("");
+  const [products, setProducts] = useState(PRODUCTS);
+
+
+  useEffect(() => {
+    const jwt_token = localStorage.getItem('jwt-token');
+
+    const headers = { 'Authorization': `Bearer ${jwt_token}` }
+
+    api.get('/api/v0/products', { headers }).then((response) => {
+      const data = response.data;
+      if (data.length !== 0) {
+        setProducts(data);
+      }
+
+    }).catch((error) => {
+      if (error.response.status === 401) {
+        localStorage.clear();
+        navigate('/');
+      } else {
+        console.log(error);
+      }
+    })
+  }, [])
+
+  const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(search.toLowerCase())
   );
 

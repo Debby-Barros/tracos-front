@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../assets/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Container,
   GlobalStyle,
@@ -10,8 +10,22 @@ import {
   Title
 } from "./styles";
 import { Button } from "../Button";
+import jwt_decode from 'jwt-decode';
 
-export function Header({name="Debora"}) {
+export function Header({ name = "Debora" }) {
+
+  const navigate = useNavigate();
+
+  const getUserInfo = () => {
+    const jwt_token = localStorage.getItem('jwt-token');
+
+    if (jwt_token === undefined || jwt_token === null) {
+      navigate('/');
+    } else {
+      return jwt_decode(jwt_token);
+    }
+  }
+
   return (
     <Container>
       <GlobalStyle />
@@ -24,11 +38,11 @@ export function Header({name="Debora"}) {
       <NavigationMenu>
         <Title>ranking</Title>
         <Title>meus anúncios</Title>
-        <Link to="/profile" style={{textDecoration: 'none'}}>
-          <Button content={name}  picture="https://picsum.photos/24"/>
+        <Link to="/profile" style={{ textDecoration: 'none' }}>
+          <Button content={getUserInfo().nickname} />
         </Link>
-        <Link to="/announce" style={{textDecoration: 'none'}}>
-          <Button content="anunciar"/>
+        <Link to="/announce" style={{ textDecoration: 'none' }}>
+          <Button content="anunciar" />
         </Link>
       </NavigationMenu>
     </Container>

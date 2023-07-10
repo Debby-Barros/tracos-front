@@ -22,6 +22,7 @@ export function SignUp() {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [profilePicture, setProfilePicture] = useState('');
 
   const handlePasswords = (repeatedPassword) => {
     // code to check if both passwords are the same
@@ -30,14 +31,25 @@ export function SignUp() {
     }
   }
   const handleSubmit = (event) => {
-    api.post('/api/v0/users', {
-      name: name,
-      nickname: nickname,
-      cpf: cpf,
-      phone: phone,
-      email: email,
-      password: password
-    }).catch((err) => {
+
+    const formData = new FormData();
+
+    formData.append('name', name);
+    formData.append('nickname', nickname);
+    formData.append('cpf', cpf);
+    formData.append('phone', phone);
+    formData.append('email', email);
+    formData.append('password', password);
+    formData.append('profilePicture', profilePicture);
+
+
+    const config = {
+      headers: {
+        "content-type": "multipart/form-data"
+      }
+    }
+
+    api.post('/api/v0/users', formData, config).catch((err) => {
       console.error("ops! ocorreu um erro" + err);
     })
     navigate('/');
@@ -103,6 +115,15 @@ export function SignUp() {
             required
             onChange={(event) => {
               handlePasswords(event.target.value);
+            }}
+          />
+          <InputTitle>Imagem de perfil</InputTitle>
+          <Input
+            type="file"
+            accept=".jpg"
+            name="pfp"
+            onChange={(event) => {
+              setProfilePicture(event.target.files[0]);
             }}
           />
           <br />
