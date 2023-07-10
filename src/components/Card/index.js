@@ -1,7 +1,9 @@
 import React from "react";
 import { CardContainer, CardContent, ActionButton } from "./styles";
+import { useNavigate } from "react-router-dom";
 
 export function Card({ product }) {
+  const navigate = useNavigate();
 
   return (
     <CardContainer>
@@ -12,7 +14,7 @@ export function Card({ product }) {
           <p>{product.description}</p>
         </span>
       </CardContent>
-      <ActionButton type={product.donation}>{product.donation === false ? "troca" : "doação"}</ActionButton>
+      <ActionButton onClick={() => navigate(`/product/${product.id}`)} type={product.donation}>{product.donation === false ? "troca" : "doação"} </ActionButton>
     </CardContainer>
-  );
+  );  
 }

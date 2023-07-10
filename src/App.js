@@ -1,7 +1,6 @@
 import React from "react";
-import { RoutesApp } from "./routes";
-import { theme } from "./global/theme";
 import { GlobalStyle } from "./pages/SignIn/styles";
+import { RoutesApp } from "./routes";
 
 function App() {
   return (

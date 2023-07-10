@@ -78,7 +78,7 @@ export function HomePage() {
         console.log(error);
       }
     })
-  }, [])
+  }, [navigate])
 
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(search.toLowerCase())
@@ -97,8 +97,8 @@ export function HomePage() {
           <p className="not-found">Produto não encontrado!</p>
         ) : (
           <Cards>
-            {filteredProducts.map((product) => (
-              <Card product={product} />
+            {filteredProducts?.map((product) => (
+              <Card product={product} key={product.id} />
             ))}
           </Cards>
         )}

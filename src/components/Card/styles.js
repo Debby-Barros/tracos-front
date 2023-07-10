@@ -23,11 +23,11 @@ export const CardContent = styled.div`
 `;
 
 export const ActionButton = styled.button`
-display: flex;
-align-items: center;
-justify-content: center;
-height: 100px;
-padding: 2px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  padding: 2px 0;
   width: 100px;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
