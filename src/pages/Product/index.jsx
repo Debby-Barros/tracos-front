@@ -6,27 +6,29 @@ import { Card } from "../../components/Card";
 import { Container, GlobalStyle } from "./styles";
 
 export function ProductPage() {
-    const {id} = useParams()
+    const { id } = useParams()
     const [product, setProduct] = useState({});
 
     useEffect(() => {
         const jwt_token = localStorage.getItem('jwt-token');
-        const headers = { 'Authorization': `Bearer ${jwt_token}`}
-    
+        const headers = { 'Authorization': `Bearer ${jwt_token}` }
+
         api.get(`/api/v0/products/${id}`, { headers }).then((response) => {
-          const data = response.data;
+            const data = response.data;
             setProduct(data);
         })
-      }, [id])
-return (
-    <>
-        <Header />
-        <Container>
-            <GlobalStyle />
-            <Card product={product} />
-        </Container>
-    </>
-)
+    }, [id])
+    return (
+        <>
+            <Header />
+            <Container>
+                <GlobalStyle />
+                <h1>{product.id}</h1>
+                <h1>{product.owner}</h1>
+                <h1>{product.name}</h1>
+            </Container>
+        </>
+    )
 }
 
 
