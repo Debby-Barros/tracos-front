@@ -18,7 +18,7 @@ export const Container = styled.div`
     align-items: center;
     background-color: ${theme.colors.primary};
     width: 100vw;
-    height: 100vh;
+    height: 100%;
 `
 
 export const FormContainer = styled.div`
@@ -36,6 +36,7 @@ export const Title = styled.p`
   align-items: center;
   margin-bottom: 10px;
   font-weight: 700;
+  margin-top: 30px;
 `
 
 export const InputTitle = styled.p`
@@ -77,4 +78,6 @@ export const ButtonContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
 `

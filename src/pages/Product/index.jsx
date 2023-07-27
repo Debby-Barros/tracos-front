@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../../services/api";
+import { Header } from "../../components/Header";
 import { Card } from "../../components/Card";
+import { Container, GlobalStyle } from "./styles";
 
 export function ProductPage() {
     const {id} = useParams()
@@ -18,7 +20,16 @@ export function ProductPage() {
       }, [id])
 return (
     <>
-        <Card product={product} />
+        <Header />
+        <Container>
+            <GlobalStyle />
+            <Card product={product} />
+        </Container>
     </>
 )
 }
+
+
+
+
+

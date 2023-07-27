@@ -131,7 +131,7 @@ export function SignUp() {
             <RegisterLink>
               <Link to="/" style={{
                 textDecoration: 'none',
-                color: '#FFB627'
+                color: '#FFB627',
               }}>
                 registrar
               </Link>
