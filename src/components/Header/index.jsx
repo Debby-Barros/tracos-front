@@ -37,12 +37,17 @@ export function Header({ name = "Debora" }) {
       </Link>
       <NavigationMenu>
         <Title>ranking</Title>
-        <Title>meus anúncios</Title>
+        <Link to="/myAnnounce" style={{ textDecoration: 'none' }}>
+          <Title>meus anúncios</Title>
+        </Link>
         <Link to="/profile" style={{ textDecoration: 'none' }}>
           <Button content={getUserInfo().nickname} />
         </Link>
         <Link to="/announce" style={{ textDecoration: 'none' }}>
           <Button content="anunciar" />
+        </Link>
+        <Link to="/" style={{ textDecoration: 'none', color: '#f6f6f9' }}>
+              <Title>Sair</Title>
         </Link>
       </NavigationMenu>
     </Container>

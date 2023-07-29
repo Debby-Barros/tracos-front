@@ -6,6 +6,8 @@ import {HomePage} from "../pages/HomePage";
 import { Profile } from "../pages/Profile";
 import { Announce } from "../pages/Announce";
 import { ProductPage } from "../pages/Product";
+import { MyAnnounce } from "../pages/MyAnnounce";
+import { EditProfile } from "../pages/EditProfile";
 
 export function RoutesApp() {
     return (
@@ -17,6 +19,8 @@ export function RoutesApp() {
           <Route Component={Profile} path="/profile"/>
           <Route Component={Announce} path="/announce"/>
           <Route Component={ProductPage} path="/product/:id"/>
+          <Route Component={MyAnnounce} path="/myAnnounce"/>
+          <Route Component={EditProfile} path="/editProfile"/>
         </Routes>            
      </BrowserRouter>
     )

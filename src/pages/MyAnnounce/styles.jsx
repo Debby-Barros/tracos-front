@@ -30,26 +30,10 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
     color: ${theme.fontColor.colorTitle};
-    font-size: 30px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
     font-weight: 700; 
-`
-
-export const Description = styled.h1`
-    color: ${theme.fontColor.colorTitle};
-    font-size: 20px;
-    display: flex;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    font-weight: 600; 
-    margin-left: 50px;
-`
-
-export const Text = styled.text`
-    color: white;
-    margin-left: 50px;
-    margin-bottom: 50px;
 `

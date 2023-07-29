@@ -55,7 +55,7 @@ export const InputTitle = styled.p`
     padding: 5px;
 `
 
-export const Input = styled.p`
+export const Input = styled.input`
     width: 330px;
     height: 30px;
     background-color: ${theme.colors.primary};

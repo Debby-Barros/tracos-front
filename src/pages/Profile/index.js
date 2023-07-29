@@ -16,8 +16,8 @@ import jwt_decode from 'jwt-decode';
 
 import { Header } from "../../components/Header";
 import api from "../../services/api";
-import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export function Profile() {
@@ -66,41 +66,29 @@ export function Profile() {
               <Image src={profilePicture} style={{ height: 200 }} />
             </Img>
             <SubTitle>{apelido}</SubTitle>
+            
             <InputTitle>apelido</InputTitle>
-            <Input
-              type="text"
-              required
-              value={apelido}
-            />
-            <InputTitle>telefone</InputTitle>
-            <Input
-              type="tel"
-              required
-              value={telefone}
-            />
-            <InputTitle>email</InputTitle>
-            <Input
-              type="text"
-              required
-              value={email}
-            />
-            <InputTitle>senha</InputTitle>
-            <Input
-              type="password"
-              required
-            />
-            <br />
-            <ButtonContainer>
-              <Button
-                type="submit"
-              >editar
-              </Button>
+            <Input>{apelido}</Input>
 
-              <Button
-                type="submit"
-              >salvar
-              </Button>
-            </ButtonContainer>
+            <InputTitle>telefone</InputTitle>
+            <Input>{telefone}</Input>
+
+            <InputTitle>email</InputTitle>
+            <Input>{email}</Input>
+            
+            <InputTitle>senha</InputTitle>
+            <Input>******</Input>
+       
+            <br />
+            <Link to="/editProfile">
+              <ButtonContainer>
+                <Button
+                  type="submit"
+                >editar
+                </Button>
+              </ButtonContainer>
+            </Link>
+
           </Form>
         </FormContainer>
       </Container>
