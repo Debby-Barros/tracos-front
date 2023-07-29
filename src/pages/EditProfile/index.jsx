@@ -80,7 +80,7 @@ import {
               <Input type="password" />
          
               <br />
-              <Link to="/profile">
+              <Link to="/profile" style={{ textDecoration: 'none' }}>
                 <ButtonContainer>
                     <Button
                     type="submit"

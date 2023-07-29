@@ -67,6 +67,7 @@ export const Input = styled.p`
     }
     color: ${theme.colors.white};
     padding-left: 10px;
+    font-size: 12px;
 `
 
 export const Button = styled.button`

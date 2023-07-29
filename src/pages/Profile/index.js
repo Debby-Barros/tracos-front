@@ -80,7 +80,7 @@ export function Profile() {
             <Input>******</Input>
        
             <br />
-            <Link to="/editProfile">
+            <Link to="/editProfile" style={{ textDecoration: 'none' }}>
               <ButtonContainer>
                 <Button
                   type="submit"

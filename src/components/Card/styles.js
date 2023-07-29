@@ -42,3 +42,10 @@ export const ActionButton = styled.button`
   text-transform: uppercase;
   align-self: flex-end;
 `;
+
+export const P = styled.p`
+  max-width: 25ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+`

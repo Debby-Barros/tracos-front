@@ -11,12 +11,6 @@ export function HomePage() {
 
   const PRODUCTS = [
     {
-      name: "Paçoca",
-      description: "Product description example",
-      donation: false,
-      pictureUrl: "https://picsum.photos/200",
-    },
-    {
       name: "Product",
       description: "Product description example",
       donation: false,
