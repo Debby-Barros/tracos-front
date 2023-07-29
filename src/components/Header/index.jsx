@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../assets/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import {
@@ -15,16 +15,17 @@ import jwt_decode from 'jwt-decode';
 export function Header({ name = "Debora" }) {
 
   const navigate = useNavigate();
+  const [username, setUsername] = useState('User');
 
-  const getUserInfo = () => {
+  useEffect(() => {
     const jwt_token = localStorage.getItem('jwt-token');
 
     if (jwt_token === undefined || jwt_token === null) {
       navigate('/');
     } else {
-      return jwt_decode(jwt_token);
+      setUsername(jwt_decode(jwt_token).nickname);
     }
-  }
+  }, [navigate])
 
   return (
     <Container>
@@ -41,13 +42,13 @@ export function Header({ name = "Debora" }) {
           <Title>meus anúncios</Title>
         </Link>
         <Link to="/profile" style={{ textDecoration: 'none' }}>
-          <Button content={getUserInfo().nickname} />
+          <Button content={username} />
         </Link>
         <Link to="/announce" style={{ textDecoration: 'none' }}>
           <Button content="anunciar" />
         </Link>
         <Link to="/" style={{ textDecoration: 'none', color: '#f6f6f9' }}>
-              <Title>Sair</Title>
+          <Title>Sair</Title>
         </Link>
       </NavigationMenu>
     </Container>

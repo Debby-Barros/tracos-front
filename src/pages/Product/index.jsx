@@ -23,7 +23,7 @@ export function ProductPage() {
             <Container>
                 <GlobalStyle />
                 <Title> {product.name} </Title>
-                <img src={product.pictureUrl} />
+                <img src={product.pictureUrl} alt='product shown' />
                 <Description> descrição </Description>
                 <Text>{product.description}</Text>
             </Container>
