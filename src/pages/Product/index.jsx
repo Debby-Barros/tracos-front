@@ -26,6 +26,10 @@ export function ProductPage() {
                 <img src={product.pictureUrl} alt='product shown' />
                 <Description> descrição </Description>
                 <Text>{product.description}</Text>
+                {console.log(product.phone)}
+                {product.phone === null ? (false) : (<><Description> phone </Description><Text>{product.phone}</Text></>)}
+                <Description> email </Description>
+                <Text>{product.email}</Text>
             </Container>
         </>
     )
