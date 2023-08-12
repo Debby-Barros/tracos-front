@@ -23,14 +23,17 @@ export function ProductPage() {
             <Container>
                 <GlobalStyle />
                 <Title> {product.name} </Title>
-                <img src={product.pictureUrl} alt='product shown' />
-                <Description> descrição </Description>
+                <img src={product.pictureUrl} alt='product shown' style={{width: "500px", margin: "auto", display:"block"}}/>
+                <div>
+                    <Description> Descrição </Description>
+                </div>
                 <Text>{product.description}</Text>
                 {console.log(product.phone)}
-                {product.phone === null ? (false) : (<><Description> phone </Description><Text>{product.phone}</Text></>)}
+                {product.phone === null ? (false) : (<><Description> Telefone </Description><Text>{product.phone}</Text></>)}
                 <Description> email </Description>
                 <Text>{product.email}</Text>
-            </Container>
+
+                 </Container>
         </>
     )
 }

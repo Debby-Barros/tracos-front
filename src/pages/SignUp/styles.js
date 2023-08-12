@@ -18,7 +18,7 @@ export const Container = styled.div`
     align-items: center;
     background-color: ${theme.colors.primary};
     width: 100vw;
-    height: 100%;
+    height: 100vh;
 `
 
 export const FormContainer = styled.div`

@@ -18,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
     background-color: ${theme.colors.primary};
     width: 100%;
-    min-height: 100vh;
     
     .not-found {
         padding-top: 48px;
@@ -26,6 +25,7 @@ export const Container = styled.div`
         text-align: center;
         font-size: 24px;
     }
+      
 `
 
 export const Cards = styled.div`
@@ -37,3 +37,4 @@ export const Cards = styled.div`
     margin: 0 auto;
     padding: 48px;
 `
+

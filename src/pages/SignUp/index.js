@@ -92,6 +92,7 @@ export function SignUp() {
             onChange={(event) => {
               setPhone(event.target.value);
             }}
+            placeholder="(Opcional) será mostrado a outros usuários"
           />
           <InputTitle>email</InputTitle>
           <Input

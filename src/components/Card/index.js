@@ -8,7 +8,7 @@ export function Card({ product }) {
   return (
     <CardContainer>
       <CardContent>
-        <img src={product.pictureUrl} alt="Product" style={{ height: 200 }} />
+        <img src={product.pictureUrl} alt="Product" style={{ height: "200px", width: "200px" }} />
         <span className="description">
           <h1>{product.name}</h1>
           <P>{product.description}</P>

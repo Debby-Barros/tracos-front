@@ -40,16 +40,24 @@ export const Title = styled.h1`
 
 export const Description = styled.h1`
     color: ${theme.fontColor.colorTitle};
-    font-size: 20px;
+    font-size: 15px;
     display: flex;
     margin-top: 30px;
-    margin-bottom: 20px;
-    font-weight: 600; 
-    margin-left: 50px;
+    margin-bottom: 5px;
+    width: 500px;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
 `
 
 export const Text = styled.text`
     color: white;
-    margin-left: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    display: flex;
+    overflow: hidden;
+    margin-left: 500px;
+    width: 500px;
+    margin: auto;
+    text-align: justify;
 `

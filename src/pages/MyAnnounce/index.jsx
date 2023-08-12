@@ -57,6 +57,7 @@ export function MyAnnounce() {
                             <Card product={product} key={product.id} />
                         ))}
                     </Cards>
+                    
                 )}
             </Container>
 

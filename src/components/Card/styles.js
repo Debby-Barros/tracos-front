@@ -44,8 +44,8 @@ export const ActionButton = styled.button`
 `;
 
 export const P = styled.p`
-  max-width: 25ch;
+  max-width: 26ch;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 `

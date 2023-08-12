@@ -18,8 +18,7 @@ export const Container = styled.body`
     justify-content: center;
     align-items: center;
     background-color: ${theme.colors.primary};
-    width: 100%;
-    height: 100%;
+    width: 100vw;
 `
 
 export const FormContainer = styled.div`
