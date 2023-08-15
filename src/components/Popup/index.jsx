@@ -6,7 +6,7 @@ import Modal from './modal'
 import { PopUp2 } from './index1'
 import { Button, Container, Text } from './styles'
 
-export function PopUp() {
+export function PopUp({ productId }) {
   const [openModal, setOpenModal] = useState(false)
 
   return (
@@ -16,7 +16,7 @@ export function PopUp() {
       </Container>
       <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
         <Text>Você deseja excluir esse card?</Text>
-        <PopUp2 />
+        <PopUp2 productId={productId} />
       </Modal>
     </>
   )

@@ -20,7 +20,6 @@ export function MyAnnounce() {
         const headers = { 'Authorization': `Bearer ${jwt_token}` }
 
         const jwt_info = jwt_decode(jwt_token)
-        console.log(jwt_info);
 
         api.get(`/api/v0/products/creator/${jwt_info.sub}`, { headers }).then((response) => {
             const data = response.data;
