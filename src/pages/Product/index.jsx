@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import api from "../../services/api";
 import { Header } from "../../components/Header";
 import { Container, GlobalStyle, Title, Text, Description } from "./styles";
+import { PopUp } from "../../components/Popup";
 
 export function ProductPage() {
     const { id } = useParams()
@@ -32,8 +33,8 @@ export function ProductPage() {
                 {product.phone === null ? (false) : (<><Description> Telefone </Description><Text>{product.phone}</Text></>)}
                 <Description> email </Description>
                 <Text>{product.email}</Text>
-
-                 </Container>
+                <PopUp/>
+            </Container>
         </>
     )
 }
