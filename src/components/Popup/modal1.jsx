@@ -1,5 +1,5 @@
 import React from 'react'
-import {FecharPopup, ButtonDiv, ButtonPopup1} from './styles'
+import {FecharPopup, ButtonPopup1} from './styles'
 
 const BACKGROUND_STYLE = {
   position: 'fixed',
@@ -22,7 +22,7 @@ const MODAL_STYLE = {
   color: 'black'
 }
 
-export default function Modal({ isOpen, setModalOpen, children }) {
+export default function Modal1({ isOpen, setModalOpen, children }) {
   if (isOpen) {
     return (
       <div style={BACKGROUND_STYLE}>
@@ -32,9 +32,7 @@ export default function Modal({ isOpen, setModalOpen, children }) {
           </FecharPopup>
           <div>{children}</div>
 
-          <ButtonDiv>
-            <ButtonPopup1 onClick={setModalOpen}>cancelar</ButtonPopup1>
-          </ButtonDiv>
+          <ButtonPopup1 onClick={setModalOpen}>cancelar</ButtonPopup1>
         </div>
       </div>
     )
