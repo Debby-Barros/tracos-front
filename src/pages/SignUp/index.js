@@ -88,7 +88,6 @@ export function SignUp() {
           <InputTitle>telefone</InputTitle>
           <Input
             type="tel"
-            required
             onChange={(event) => {
               setPhone(event.target.value);
             }}
