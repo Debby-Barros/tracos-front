@@ -23,7 +23,7 @@ export function Header({ name = "Debora" }) {
     if (jwt_token === undefined || jwt_token === null) {
       navigate('/');
     } else {
-      setUsername(jwt_decode(jwt_token).nickname);
+      setUsername(localStorage.getItem('user-nickname'));
     }
   }, [navigate])
 

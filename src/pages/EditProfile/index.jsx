@@ -17,7 +17,7 @@ import jwt_decode from 'jwt-decode';
 import { Header } from "../../components/Header";
 import api from "../../services/api";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 export function EditProfile() {
@@ -78,7 +78,9 @@ export function EditProfile() {
       }
     }
 
-    api.patch(`/api/v0/users/${jwt_decode(jwt_token).sub}`, payload, { headers }).catch((error) => {
+    api.patch(`/api/v0/users/${jwt_decode(jwt_token).sub}`, payload, { headers }).then((response) => {
+
+    }).catch((error) => {
       if (error.response.status === 401) {
         localStorage.clear();
         navigate('/');
@@ -87,6 +89,7 @@ export function EditProfile() {
       }
     })
 
+    localStorage.setItem('user-nickname', apelido);
     navigate('/profile');
   }
 

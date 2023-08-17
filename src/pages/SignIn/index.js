@@ -17,6 +17,7 @@ import {
 
 import Logo from "../../assets/logo.svg"
 import api from "../../services/api";
+import jwtDecode from "jwt-decode";
 
 export function SignIn() {
   const navigate = useNavigate();
@@ -44,6 +45,7 @@ export function SignIn() {
 
       localStorage.clear();
       localStorage.setItem('jwt-token', token);
+      localStorage.setItem('user-nickname', jwtDecode(token).nickname);
 
       navigate('/home');
     }).catch((error) => {
