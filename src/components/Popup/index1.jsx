@@ -1,9 +1,8 @@
-
 /* Pop up para informar o motivo da exclusão*/
 
 import { useState } from 'react'
-import Modal from './modal'
-import { Text } from './styles'
+import Modal1 from './modal1'
+import { ButtonPopup, Text1, ButtonPopup1 } from './styles'
 import api from '../../services/api'
 import { useNavigate } from 'react-router-dom'
 
@@ -32,14 +31,13 @@ export function PopUp2({ productId }) {
 
   return (
     <>
-      <div>
-        <button onClick={() => setOpenModal(true)}>sim</button>
-      </div>
-      <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
-        <Text>Por que deseja excluir esse card?</Text>
-        <button onClick={() => handleDeletion(false)}>desisti do anuncio</button>
-        <button onClick={() => handleDeletion(true)}>doei/troquei</button>
-      </Modal>
+      <ButtonPopup style={{display: "flex", position: "relative", top: "20px"}} onClick={() => setOpenModal(true)}>sim</ButtonPopup>
+ 
+      <Modal1 isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
+        <Text1>Por que deseja excluir esse card?</Text1>
+        <ButtonPopup1 onClick={() => handleDeletion(false)}>desisti do anuncio</ButtonPopup1>
+        <ButtonPopup1 onClick={() => handleDeletion(true)}>doei / troquei</ButtonPopup1>
+      </Modal1>
     </>
   )
 }
