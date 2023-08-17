@@ -4,6 +4,7 @@ import api from "../../services/api";
 import { Header } from "../../components/Header";
 import { Container, GlobalStyle, Title, Text, Description } from "./styles";
 import { PopUp } from "../../components/Popup";
+import jwtDecode from "jwt-decode";
 
 export function ProductPage() {
 
@@ -45,7 +46,7 @@ export function ProductPage() {
                 {product.phone === null ? (false) : (<><Description> Telefone </Description><Text>{product.phone}</Text></>)}
                 <Description> email </Description>
                 <Text>{product.email}</Text>
-                <PopUp productId={product.id} />
+                {jwtDecode(localStorage.getItem('jwt-token')).sub === product.owner ? (<PopUp productId={product.id} />) : (false)}
             </Container>
         </>
     )
