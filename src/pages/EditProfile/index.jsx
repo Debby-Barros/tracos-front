@@ -28,7 +28,7 @@ export function EditProfile() {
   const [telefone, setTelefone] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [profilePicture, setProfilePicture] = useState('https://picsum.photos/200')
+  const [profilePicture, setProfilePicture] = useState('')
 
   useEffect(() => {
     const jwt_token = localStorage.getItem('jwt-token');

@@ -27,7 +27,7 @@ export function Profile() {
   const [apelido, setApelido] = useState('#Apelido')
   const [telefone, setTelefone] = useState('')
   const [email, setEmail] = useState('')
-  const [profilePicture, setProfilePicture] = useState('https://picsum.photos/200')
+  const [profilePicture, setProfilePicture] = useState('')
 
 
   useEffect(() => {

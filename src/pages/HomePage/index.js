@@ -9,48 +9,9 @@ import { useNavigate } from "react-router-dom";
 
 export function HomePage() {
 
-  const PRODUCTS = [
-    {
-      name: "Product",
-      description: "Product description example",
-      donation: false,
-      pictureUrl: "https://picsum.photos/200",
-    },
-    {
-      name: "Product",
-      description: "Product description example",
-      donation: false,
-      pictureUrl: "https://picsum.photos/200",
-    },
-    {
-      name: "caderno inteligente",
-      description: "Product description example",
-      donation: true,
-      pictureUrl: "https://picsum.photos/200",
-    },
-    {
-      name: "salve",
-      description: "salve description example",
-      donation: false,
-      pictureUrl: "https://picsum.photos/200",
-    },
-    {
-      name: "ulala",
-      description: "ulala description example",
-      donation: false,
-      pictureUrl: "https://picsum.photos/200",
-    },
-    {
-      name: "Product",
-      description: "Product description example",
-      donation: false,
-      pictureUrl: "https://picsum.photos/200",
-    },
-  ];
-
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
-  const [products, setProducts] = useState(PRODUCTS);
+  const [products, setProducts] = useState([]);
 
 
   useEffect(() => {

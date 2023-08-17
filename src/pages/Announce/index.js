@@ -28,7 +28,7 @@ export function Announce() {
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('livro');
   const [donation, setDonation] = useState(true);
-  const [image, setImage] = useState('https://picsum.photos/200')
+  const [image, setImage] = useState('')
   const [saveImage, setSaveImage] = useState('');
 
   const handleSubmit = (event) => {
