@@ -37,7 +37,7 @@ export function ProductPage() {
             <Container>
                 <GlobalStyle />
                 <Title> {product.name} </Title>
-                {product.pictureUrl === '' ? (false) : (<img src={product.pictureUrl} alt='product shown' style={{ width: "500px", margin: "auto", display: "block" }} />)}
+                {product.pictureUrl === '' ? (false) : (<img src={product.pictureUrl} alt='product shown' style={{ width: "200px", margin: "auto", display: "block" }} />)}
                 <div>
                     <Description> Descrição </Description>
                 </div>

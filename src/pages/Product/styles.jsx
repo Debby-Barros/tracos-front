@@ -59,5 +59,4 @@ export const Text = styled.text`
     margin-left: 500px;
     width: 500px;
     margin: auto;
-    text-align: justify;
-`
+    text-align: justify;`

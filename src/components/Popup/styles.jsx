@@ -9,6 +9,7 @@ export const Button = styled.button`
     border-color: ${theme.colors.blue};
     color: ${theme.fontColor.colorTitle};
     font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
 `
 
 export const Container = styled.div`
