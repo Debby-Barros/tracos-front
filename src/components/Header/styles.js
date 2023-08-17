@@ -25,7 +25,6 @@ export const LogoContainer = styled.header`
 export const Container = styled.div`
   padding: 0 48px;
   background-color: ${theme.colors.primary};
-  width: 100%; 
   height: 125px;
   display: flex;
   justify-content: space-between;
