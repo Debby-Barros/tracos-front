@@ -26,8 +26,8 @@ export function Announce() {
 
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [category, setCategory] = useState('');
-  const [donation, setDonation] = useState('');
+  const [category, setCategory] = useState('livro');
+  const [donation, setDonation] = useState(true);
   const [image, setImage] = useState('https://picsum.photos/200')
   const [saveImage, setSaveImage] = useState('');
 
