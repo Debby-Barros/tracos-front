@@ -17,9 +17,6 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
     background-color: ${theme.colors.primary};
-    width: 100%;
-    min-width: 100vw;
-    height: 100%;
     
     .not-found {
         padding-top: 48px;
