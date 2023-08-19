@@ -35,6 +35,21 @@ export function Ranking() {
 
             <Container>
                 <GlobalStyle />
+                <table style={{ color: "white" }}>
+                    <caption>Ranking</caption>
+                    <thead>
+                        <th scope="col" colSpan="2">Nome</th>
+                        <th scope="col">Pontuação</th>
+                    </thead>
+                    <tbody>
+                        {ranking.length !== 0 ? (ranking.map((user) => (
+                            <tr>
+                                <td colSpan="2">{user.name}</td>
+                                <td>{user.score}</td>
+                            </tr>
+                        ))) : (false)}
+                    </tbody>
+                </table>
             </Container>
         </>
     )
