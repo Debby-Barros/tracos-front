@@ -37,7 +37,9 @@ export function Header({ name = "Debora" }) {
         </LogoContainer>
       </Link>
       <NavigationMenu>
-        <Title>ranking</Title>
+        <Link to="/ranking" style={{ textDecoration: 'none' }}>
+          <Title>ranking</Title>
+        </Link>
         <Link to="/myAnnounce" style={{ textDecoration: 'none' }}>
           <Title>meus anúncios</Title>
         </Link>

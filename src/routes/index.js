@@ -8,6 +8,7 @@ import { Announce } from "../pages/Announce";
 import { ProductPage } from "../pages/Product";
 import { MyAnnounce } from "../pages/MyAnnounce";
 import { EditProfile } from "../pages/EditProfile";
+import { Ranking } from "../pages/Ranking";
 
 export function RoutesApp() {
     return (
@@ -21,6 +22,7 @@ export function RoutesApp() {
           <Route Component={ProductPage} path="/product/:id"/>
           <Route Component={MyAnnounce} path="/myAnnounce"/>
           <Route Component={EditProfile} path="/editProfile"/>
+          <Route Component={Ranking} path="/ranking"/>
         </Routes>            
      </BrowserRouter>
     )
