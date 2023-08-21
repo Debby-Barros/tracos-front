@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Header } from "../../components/Header";
-import { Container, GlobalStyle } from './style'
+import { Container, GlobalStyle, Table, Title, Head, Body, Thead, Trow, Tdata } from './style'
 import { useNavigate } from "react-router-dom";
 import api from "../../services/api";
 
@@ -32,24 +32,23 @@ export function Ranking() {
     return (
         <>
             <Header />
-
             <Container>
                 <GlobalStyle />
-                <table style={{ color: "white" }}>
-                    <caption>Ranking</caption>
-                    <thead>
-                        <th scope="col" colSpan="2">Nome</th>
-                        <th scope="col">Pontuação</th>
-                    </thead>
-                    <tbody>
+                <Title>Ranking</Title>
+                <Table>
+                    <Head>
+                        <Thead scope="col" colSpan="2">Nome</Thead>
+                        <Thead scope="col">Pontuação</Thead>
+                    </Head>
+                    <Body>
                         {ranking.length !== 0 ? (ranking.map((user) => (
-                            <tr>
-                                <td colSpan="2">{user.name}</td>
-                                <td>{user.score}</td>
-                            </tr>
+                            <Trow>
+                                <Tdata colSpan="2">{user.name}</Tdata>
+                                <Tdata>{user.score}</Tdata>
+                            </Trow>
                         ))) : (false)}
-                    </tbody>
-                </table>
+                    </Body>
+                </Table>
             </Container>
         </>
     )

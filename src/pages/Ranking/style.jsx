@@ -17,7 +17,6 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
     background-color: ${theme.colors.primary};
-    width: 100%;
     min-height: 100vh;
     
     .not-found {
@@ -27,4 +26,44 @@ export const Container = styled.div`
         font-size: 24px;
     }
       
+`
+
+export const Title = styled.h1`
+    color: ${theme.fontColor.colorTitle};
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    font-weight: 700; 
+`
+
+export const Table = styled.table`
+    color: white;
+    margin: auto;
+`
+
+export const Head = styled.thead`
+    
+`
+
+export const Body = styled.tbody`
+`
+
+export const Thead = styled.th`
+    color: white;
+    background: ${theme.colors.blue};
+    
+`
+
+export const Trow = styled.tr`
+    &:nth-child(even) {
+    background: ${theme.colors.blue};
+  }
+`
+
+export const Tdata = styled.td`
+    padding-left: 90px;
+    padding-right: 80px;
+    margin: auto;
 `
