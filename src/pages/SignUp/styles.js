@@ -19,7 +19,7 @@ export const Container = styled.div`
     background-color: ${theme.colors.primary};
     width: 100vw;
     min-width: 100vw;
-    height: 100%;
+    height: 100vh;
 `
 
 export const FormContainer = styled.div`
